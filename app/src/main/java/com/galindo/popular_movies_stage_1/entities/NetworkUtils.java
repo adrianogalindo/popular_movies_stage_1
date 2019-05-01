@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class NetworkUtils {
     private final static String BASE_URL = "https://api.themoviedb.org/3/movie";
     private final static String PARAM_API_KEY = "api_key";
-    private final static String apiKey = "your_api_key";
+    private final static String apiKey = "";
 
     //following code is taken from sunshine NetworkUtils.
     public static URL buildUrl(String theMovieDbSearchQuery){

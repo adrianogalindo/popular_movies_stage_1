@@ -1,8 +1,11 @@
 package com.galindo.popular_movies_stage_1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,10 +25,25 @@ public class DetailActivity extends AppCompatActivity {
             if (intentThatStartedThisActivity.hasExtra(Intent.EXTRA_TEXT)) {
                 String movie = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT);
                 populateUI(movie);
+
+                ImageView poster = findViewById(R.id.iv_detail_movie_poster);
+                poster.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Context context =getApplicationContext();
+                        Class destinationClass = FullPosterImage.class;
+                        Intent fullImageIntent = new Intent(context, destinationClass);
+                        fullImageIntent.putExtra(Intent.EXTRA_TEXT, getIntent().getStringExtra("poster"));
+                        fullImageIntent.putExtra("poster", getIntent().getStringExtra("poster"));
+                        startActivity(fullImageIntent);
+                    }
+                });
             }
         } else {
             closeOnError();
         }
+
+
     }
 
     private void populateUI(String movie) {

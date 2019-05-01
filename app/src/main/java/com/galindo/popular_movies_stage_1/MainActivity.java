@@ -27,8 +27,6 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements MovieAdapter.MovieAdapterOnClickHandler{
 
     private RecyclerView mMainActivityRecyclerView;
-
-    private RecyclerView mRecyclerView;
     private MovieAdapter mMovieAdapter;
     private List<Movie> jsonMovieData;
 
