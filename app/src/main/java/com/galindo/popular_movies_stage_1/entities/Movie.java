@@ -1,11 +1,8 @@
 package com.galindo.popular_movies_stage_1.entities;
 
-import java.util.ArrayList;
-
 public class Movie {
     private String title;
     private String poster;
-    private ArrayList<String> genre = new ArrayList<>();
     private String rating;
     private String releaseDate;
     private String overview;
@@ -58,11 +55,4 @@ public class Movie {
         this.overview = overview;
     }
 
-    public ArrayList<String> getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-       this.genre.add(genre);
-    }
 }

@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">popular_movies_stage_1</string>
+    <string name="app_name">Popular Movies - Stage 1</string>
+    <string name="error_message">Failed to get results. Please try again. </string>
+    <!-- menu -->
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <!-- details -->
+    <string name="detail_title">Avengers: Endgame</string>
+    <string name="detail_plot_synopsis">After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos actions and restore order to the universe once and for all, no matter what consequences may be in store.</string>
+    <string name="detail_rate">8.7</string>
+    <string name="detail_release_date">2019-04-24</string>
+    <string name="label_rating">Rating: </string>
+    <string name="label_release_date">Release Date: </string>
+    <string name="label_overview">Overview: </string>
+
 </resources>
