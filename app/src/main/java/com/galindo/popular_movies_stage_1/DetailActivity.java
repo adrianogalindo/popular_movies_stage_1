@@ -26,6 +26,9 @@ public class DetailActivity extends AppCompatActivity {
                 String movie = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT);
                 populateUI(movie);
 
+                //Opens activity FullPosterActivity to view the poster in full screen
+                // also implemented the zooming functionality
+                // https://github.com/chrisbanes/PhotoView
                 ImageView poster = findViewById(R.id.iv_detail_movie_poster);
                 poster.setOnClickListener(new View.OnClickListener() {
                     @Override

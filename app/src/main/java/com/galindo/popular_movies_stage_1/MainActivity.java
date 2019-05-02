@@ -46,16 +46,10 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
 
         ButterKnife.bind(this);
 
-        //how many columns can fit in one page. this method explained below.
         int mNoOfColumns = calculateNoOfColumns(getApplicationContext());
-
         GridLayoutManager layoutManager = new GridLayoutManager(this, mNoOfColumns);
-        //set the layout manager
         mMainActivityRecyclerView.setLayoutManager(layoutManager);
-        //changes in content shouldn't change the layout size
         mMainActivityRecyclerView.setHasFixedSize(true);
-
-        //set movie adapter for recycler view
         mMainActivityRecyclerView.setAdapter(mMovieAdapter);
 
         loadMovieData();
@@ -158,12 +152,11 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         return super.onOptionsItemSelected(item);
     }
 
-    //calculates how many columns can I fit in screen.
+    //calculates how many columns fits in screen.
     //Source: https://stackoverflow.com/questions/33575731/gridlayoutmanager-how-to-auto-fit-columns
     public static int calculateNoOfColumns(Context context) {
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
-        int noOfColumns = (int) (dpWidth / 180);
-        return noOfColumns;
+        return (int) (dpWidth / 180);
     }
 }
